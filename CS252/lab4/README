@@ -1,0 +1,25 @@
+Ge Yan
+CS252 Lab4
+
+Part1
+In Step3, the program creates new threads in the while(1) loop. These threads then print out "A" or "B" continuously and randomly until the it is killed.
+
+In Step5, the program never reaches that part of code which creates threads. Instead, it goes into the while(1) loop to prints "C" continuously until  it is killed.
+
+
+
+Part3
+Table:
+==========================================================================================
+                          				System  (Kernel) Time 	  User Time	 	Real Time
+pthread_mutex (count)	 	 	 				1.12				1.65		  1.66
+spin lock (count_spin with thr_yield)	 		0.09				0.23		  0.20 	  
+spin_lock (count_spin without thr_yield)		0.00				0.48		  0.27
+==========================================================================================
+Question:
+1. Explain the differences  in user time between count_spin with and without thr_yield.
+The pthread_yield() method in count_spin make the spin lock execute in system space, instead of in user space. Without it, the spin lock executes in user space, so the System Time is 0.00
+
+2. Explain the difference in system time between count and count_spin with thr_yield.
+Using the mutex lock in count runs longer time than spin_lock with thr_yield. That's because mutex lock will make the thread sleep, then recall it. This would cause overhead. But the "thr_yield" will make the thread in the runnable state instead of sleep, so it would not spend any time for "overhead", which makes spin_lock run faster.
+

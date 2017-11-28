@@ -1,0 +1,32 @@
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f63c1c7b000
+^^^^ syscall ^^^^
+
+arch_prctl(ARCH_SET_FS, 0x7f63c1c7c700) = 0
+^^^^ syscall ^^^^
+
+mprotect(0x7f63c1a82000, 16384, PROT_READ) = 0
+^^^^ syscall ^^^^
+
+mprotect(0x600000, 4096, PROT_READ)     = 0
+^^^^ syscall ^^^^
+
+mprotect(0x7f63c1cad000, 4096, PROT_READ) = 0
+^^^^ syscall ^^^^
+
+munmap(0x7f63c1c7e000, 186250)          = 0
+^^^^ syscall ^^^^
+
+write(1, "Hello World without syscall\n", 28) = 28
+^^^^ syscall ^^^^
+
+write(1, "Hello World with syscall\n", 25) = 25
+^^^^ syscall ^^^^
+
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 256), ...}) = 0
+^^^^ syscall ^^^^
+
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f63c1cab000
+^^^^ syscall ^^^^
+
+write(1, "Hello World with printf\n", 24) = 24
+^^^printf ^^^
