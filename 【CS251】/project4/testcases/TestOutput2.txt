@@ -1,0 +1,28 @@
+S11: N=20, L=20, pop=60
+S12: N=20, L=20, pop=60
+S17: N=20, L=20, pop=60
+S29: N=20, L=20, pop=60
+S17: N=27, L=29, pop=85
+S11: N=30, L=27, pop=84
+S29: N=38, L=35, pop=108
+S44: N=20, L=20, pop=60
+S46: N=20, L=20, pop=60
+1: S29, pop=108
+2: S17, pop=85
+3: S11, pop=84
+S51: N=20, L=20, pop=60
+S12: N=43, L=18, pop=79
+S11: N=27, L=35, pop=97
+S44: N=31, L=37, pop=105
+1: S29, pop=108
+2: S44, pop=105
+3: S11, pop=97
+S51: N=33, L=27, pop=87
+S46 deleted, pop=60
+S12 deleted, pop=79
+S17 deleted, pop=85
+S51: N=50, L=36, pop=122
+1: S51, pop=122
+2: S29, pop=108
+3: S44, pop=105
+min 97, max 122
